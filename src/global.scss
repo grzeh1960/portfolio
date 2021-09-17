@@ -1,0 +1,21 @@
+$mainColor:#15023a;
+
+$width: 414px;
+
+@mixin landscape {
+    @media(orientation: landscape){
+        @content
+    }
+};
+
+@mixin mobile {
+    @media (max-width: #{$width}){
+        @content
+    }
+};
+
+@mixin ipadPortrait {
+    @media (min-width:768px){
+        @content
+    }
+};

@@ -1,0 +1,26 @@
+// @import "./global.scss";
+
+.app {
+    height: 100vh;
+    .sections {
+        width: 100%;
+         height: calc(100vh - 70px);
+        //background-color: lightsalmon;
+        position: relative;
+        top: 70px;
+        // poniższa stylizacja dotyczy skrolowania w pionie 
+        scroll-behavior: smooth;
+        scroll-snap-type: y mandatory;
+        scrollbar-width: none;
+        overflow:hidden;
+// stylowanie wszystkich elementów zawartych w sections
+        > *{
+            width: 100vw;
+            height: calc(100vh - 70px);
+            scroll-snap-align: start;//powrót na początek sekcji, for firefox a niżej dla innych
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+    }
+}
